@@ -1171,9 +1171,11 @@ body.ie ._ibg img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0px -5px;
 }
 
 .produts__column {
+  padding: 0px 5px;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 25%;
           flex: 0 1 25%;
@@ -1192,12 +1194,19 @@ body.ie ._ibg img {
 }
 
 .item-products__img {
+  display: block;
   padding: 0px 0px 106.5% 0px;
   margin: 0px 0px 18px 0px;
+  overflow: hidden;
 }
 
 .item-products__img img {
   max-width: 100%;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  -o-transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
 
 .item-products__title {
@@ -1449,6 +1458,16 @@ body.ie ._ibg img {
   .quantity__button:hover::before,
   .quantity__button:hover::after {
     background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .item-products__img img:hover {
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+
+  .item-products__title:hover {
+    text-decoration: underline;
   }
 
   .body-contacts__item_2:hover {
